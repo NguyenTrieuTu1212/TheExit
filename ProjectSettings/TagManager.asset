@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ladder
+  - Obstacle
+  - Wall
+  - Firefly
+  - Platform
+  - Points
+  - Saw
+  - Glow
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Ground
+  - Ladder
+  - 
+  - 
+  - ObjDead
+  - Wall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Parallax
+    uniqueID: 1555112979
+    locked: 0
+  - name: Particals
+    uniqueID: 2967129383
+    locked: 0
+  - name: BackGround
+    uniqueID: 2429169951
+    locked: 0
+  - name: Crystal
+    uniqueID: 2222425205
+    locked: 0
+  - name: Ladder
+    uniqueID: 3981999897
+    locked: 0
+  - name: Player
+    uniqueID: 248470665
+    locked: 0
+  - name: Light
+    uniqueID: 275924821
+    locked: 0
+  - name: Chain
+    uniqueID: 1454311755
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 473224873
+    locked: 0
+  - name: Column
+    uniqueID: 129576071
+    locked: 0
+  - name: Mushroom
+    uniqueID: 3649794785
+    locked: 0
+  - name: Rune
+    uniqueID: 3565868791
+    locked: 0
+  - name: Spider
+    uniqueID: 3679970931
+    locked: 0
+  - name: StreetLamp
+    uniqueID: 3279153983
+    locked: 0
+  - name: PlatformMove
+    uniqueID: 182298893
+    locked: 0
