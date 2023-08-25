@@ -5,8 +5,7 @@ using UnityEngine;
 public abstract class GameBehaviour : MonoBehaviour
 {
 
-    // Hello Test file
-    
+
     protected virtual void Reset()
     {
         LoadComponent();
