@@ -41,4 +41,11 @@ public class InputManegement : MonoBehaviour
         return false;
     }
 
+
+    public bool OpenInventory()
+    {
+        if(Input.GetKey(KeyCode.E)) return true;
+        return false;
+    }
+
 }
