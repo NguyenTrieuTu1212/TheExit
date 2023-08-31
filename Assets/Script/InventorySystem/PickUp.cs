@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    [SerializeField] private GameObject prefabObject;
-    [SerializeField] private GameObject slot;
+    [SerializeField] private InventoryManagerment inventoryManagerment;
+    public GameObject objectPrefabs;
 
-    private void Update()
+
+    private void Awake()
     {
-        
+        inventoryManagerment = GameObject.Find("InventoryManagerment").GetComponent<InventoryManagerment>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(prefabObject, slot.transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            for(int i = 0; i < inventoryManagerment.listSlots.Count; i++)
+            {
+                if (inventoryManagerment.isFull[i] == false)
+                {
+                    Instantiate(objectPrefabs, inventoryManagerment.listSlots[i].transform, false);
+                    Destroy(gameObject);
+                    inventoryManagerment.isFull[i] = true;
+                    break;
+                }
+            }
+        }
     }
 }

@@ -29,6 +29,7 @@ public class TrapsManagement : MonoBehaviour
         }
     }
 
+    // Load Object Moving ("Don't repeat yourself)
     protected virtual void LoadObJectMove() { }
 
     protected virtual void Start()
@@ -47,9 +48,6 @@ public class TrapsManagement : MonoBehaviour
     }
     protected virtual void Moving()
     {
-        /*transform.position = Vector2.MoveTowards(transform.position, targetPos, speedMutiplier * speedPlatform * Time.fixedDeltaTime);
-        *//*Vector2 newPos = transform.position;*//*
-        rbObject.MovePosition(transform.position);*/
         rbObject.MovePosition(Vector2.MoveTowards(transform.position, targetPos, speedMutiplier * speedPlatform * Time.fixedDeltaTime));
         Vector2 newPos = transform.position;
         if (newPos == targetPos)

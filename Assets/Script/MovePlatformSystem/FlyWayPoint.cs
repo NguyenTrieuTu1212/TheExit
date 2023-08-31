@@ -40,7 +40,7 @@ public class FlyWayPoint : MonoBehaviour
                 // Switch to the normal moving character state
                 rbTarget.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
                 rbTarget.constraints = RigidbodyConstraints2D.FreezeRotation;
-                // The Camera foolow player
+                // The Camera follow player
                 camFollow.Target = GameObject.FindWithTag("Player").transform;
             }
         }

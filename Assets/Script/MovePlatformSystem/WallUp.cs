@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallUp : MoveObj
+public class WallUp : MoveObject
 {
     [SerializeField] Rigidbody2D rbPlayer;
     [SerializeField] GameObject Wall;
@@ -12,8 +12,6 @@ public class WallUp : MoveObj
     public float speedWallUp;
     [Range(0f,10f)]
     public float timeDestroyWall;
-
-
 
     private void Awake()
     {
