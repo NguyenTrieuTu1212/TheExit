@@ -6,6 +6,8 @@ public class PlayerDeath : MainPlayer
 {
     [SerializeField] Transform ObjDead;
     [SerializeField] Transform Target;
+    [SerializeField] ParticleSystem deadEffectPrefabs;
+    [SerializeField] SpriteRenderer spriteRenderer;
     [Range(0, 3f)] public float Height;
     [Range(0, 2f)] public float Width;
     [Range(0,10f)] public float timeWaitRespawn;
@@ -13,24 +15,21 @@ public class PlayerDeath : MainPlayer
     public Vector3 currentLocalScale;
     public LayerMask WhatIsLayer;
     public bool IsDie = false;
-    public ParticleSystem deadEffectPrefabs;
+
     
+    public Rigidbody2D rbPlayer;
     
 
     protected override void LoadComponent()
     {
         base.LoadComponent();
         ObjDead = transform.Find("ObjDeadCheck");
+        rbPlayer = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        deadEffectPrefabs = GameObject.Find("DeadEffect").GetComponent<ParticleSystem>();
         posRespawn = Target.transform.position;
         currentLocalScale = Target.transform.localScale;
        
     }
-
-    /*private void Start()
-    {
-        posRespawn = Target.transform.position;
-        currentLocalScale = Target.transform.localScale;
-    }*/
 
     private void Update()
     {
@@ -40,22 +39,24 @@ public class PlayerDeath : MainPlayer
 
     private void PlayerRespawn()
     {
-        
         if (IsDie) Die();
-        
     }
 
     private void Die()
     {
         deadEffectPrefabs.Play();
         StartCoroutine(WaitRespawn());
-
     }
 
     IEnumerator WaitRespawn()
     {
+        spriteRenderer.enabled = false;
+        rbPlayer.simulated = false;
         yield return new WaitForSeconds(timeWaitRespawn);
         Target.transform.position = posRespawn;
+        rbPlayer.simulated = true;
+        spriteRenderer.enabled = true;
+        
     }
     private void CheckIsDie()
     {
