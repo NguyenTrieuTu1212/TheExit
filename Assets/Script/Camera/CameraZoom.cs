@@ -27,7 +27,7 @@ public class CameraZoom : ZoomObject
     protected override void camZoom()
     {
         if (IsZoomIn)
-            CamZoom.fieldOfView = Mathf.Lerp(CamZoom.fieldOfView, 60f, 0.01f);
+            CamZoom.fieldOfView = Mathf.Lerp(CamZoom.fieldOfView, 75f , 0.01f);
         else
             CamZoom.fieldOfView = Mathf.Lerp(CamZoom.fieldOfView, 80f, 0.01f);
     }
