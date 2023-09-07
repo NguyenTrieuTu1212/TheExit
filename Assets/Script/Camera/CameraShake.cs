@@ -11,6 +11,7 @@ public class CameraShake : MonoBehaviour
     public float timeCounter;
     public GameObject cameraObject;
     public Animator camAnim;
+    public CollectEnoughItem collectEnoughItem;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class CameraShake : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isShaking)
+        if (isShaking && collectEnoughItem.CollectEnoughItems())
         {
             Shake();
         }

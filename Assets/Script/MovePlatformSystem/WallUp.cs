@@ -7,6 +7,7 @@ public class WallUp : MoveObject
     [SerializeField] Rigidbody2D rbPlayer;
     [SerializeField] GameObject Wall;
     [SerializeField] bool isWallOpen;
+    public CollectEnoughItem collectEnoughItem;
   
     [Range(0f, 10f)]
     public float speedWallUp;
@@ -19,7 +20,7 @@ public class WallUp : MoveObject
     }
     protected override void MoveFlatforms()
     {
-        if (isWallOpen)
+        if (isWallOpen && collectEnoughItem.CollectEnoughItems())
         {
             Wall.transform.Translate(Vector3.up *speedWallUp * Time.deltaTime);
             timeDestroyWall -= Time.fixedDeltaTime;
