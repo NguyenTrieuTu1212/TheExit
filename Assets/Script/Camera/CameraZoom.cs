@@ -21,7 +21,7 @@ public class CameraZoom : ZoomObject
     protected override bool isZoom()
     {
         if(target.transform.position.x >= 16f) IsZoomIn = true;
-        else IsZoomIn = false;
+        else if(target.transform.position.x < 16f) IsZoomIn = false;
         return IsZoomIn;
     }
     protected override void camZoom()
