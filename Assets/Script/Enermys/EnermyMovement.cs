@@ -38,7 +38,7 @@ public class EnermyMovement : MonoBehaviour
         groudDetection = transform.Find("GroundDetection");
         wallDectection = transform.Find("WallDetection");
         targetDetection = transform.Find("TargetDetection");
-        animSpider = GameObject.Find("Spider").GetComponent<Animator>();
+        /*animSpider = GameObject.Find("Spider").GetComponent<Animator>();*/
     }
 
     
@@ -63,17 +63,27 @@ public class EnermyMovement : MonoBehaviour
     private void Spider_Follow_Target()
     {
         rbSpider.velocity = new Vector2(speedChase, rbSpider.velocity.y);
+        animSpider.SetInteger("State", 0);
         if (target.position.x > transform.position.x)
         {
             // Spider redirect when detect player
             rbSpider.velocity = new Vector2(speedChase, rbSpider.velocity.y);
-            if (!isMoivingRight) Flip();
+            if (!isMoivingRight)
+            {
+                animSpider.SetInteger("State", 1);
+                Flip();
+            }
         }
         if (target.position.x < transform.position.x)
         {
             // Spider redirect when detect target
             rbSpider.velocity = new Vector2(-speedChase, rbSpider.velocity.y);
-            if (isMoivingRight) Flip();
+            
+            if (isMoivingRight)
+            {
+                animSpider.SetInteger("State", 1);
+                Flip();
+            }
         }
         
     }
