@@ -11,7 +11,7 @@ public class WallUp : MoveObject
   
     [Range(0f, 10f)]
     public float speedWallUp;
-    [Range(0f,10f)]
+    [Range(0f,20f)]
     public float timeDestroyWall;
 
     private void Awake()

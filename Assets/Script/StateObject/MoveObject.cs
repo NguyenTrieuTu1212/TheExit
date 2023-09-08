@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class MoveObject : MonoBehaviour
 {
 
-    protected virtual void FixedUpdate()
+    protected virtual void Update()
     {
         MoveFlatforms();
     }
