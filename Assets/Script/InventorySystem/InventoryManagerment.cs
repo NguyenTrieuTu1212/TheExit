@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryManagerment : MonoBehaviour
 {
     
-    [SerializeField] private Inventory inventory;
+    [SerializeField] private DisplayPanel inventoryDisplay;
     [SerializeField] private GameObject Slots;
     public List<GameObject> listSlots;
     public List<bool> isFull;
@@ -14,6 +14,8 @@ public class InventoryManagerment : MonoBehaviour
     
     private void Awake()
     {
+
+ 
         // Find the gameobject named "Slots" so you can load its child objects into the listSlots
         Slots = GameObject.Find("Slots");
 
@@ -24,20 +26,20 @@ public class InventoryManagerment : MonoBehaviour
         // Mark all Slots in the list of Slots as empty
         for (int i = 0; i < listSlots.Count; i++)
             isFull.Add(false);
-        inventory.Hide();
+        inventoryDisplay.Hide();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(inventory.isActiveAndEnabled== false)
+            if(inventoryDisplay.isActiveAndEnabled== false)
             {
-                inventory.Show();
+                inventoryDisplay.Show();
             }
             else
             {
-                inventory.Hide();
+                inventoryDisplay.Hide();
             }
         }
     }
