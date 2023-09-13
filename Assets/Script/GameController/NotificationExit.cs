@@ -6,7 +6,7 @@ public class NotificationExit : MonoBehaviour
 {
     [SerializeField] private DisplayPanel windownExitDisplay;
     [SerializeField] private DisplayPanel inventoryDisplay;
-    [SerializeField] private GameObject gameController;
+    [SerializeField] private GameObject inventoryCanvas;
 
     private void Awake()
     {
@@ -19,13 +19,13 @@ public class NotificationExit : MonoBehaviour
         {
             if(windownExitDisplay.isActiveAndEnabled == false)
             {
-                if (inventoryDisplay.isActiveAndEnabled) inventoryDisplay.Hide();
-                gameController.SetActive(true);
+                inventoryDisplay.Hide();
+                inventoryCanvas.SetActive(false);
                 windownExitDisplay.Show();
             }
             else
             {
-                gameController.SetActive(false);
+                inventoryCanvas.SetActive(true);
                 windownExitDisplay.Hide();
             }
         }

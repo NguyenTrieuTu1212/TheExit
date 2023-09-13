@@ -7,6 +7,7 @@ public class InventoryManagerment : MonoBehaviour
     
     [SerializeField] private DisplayPanel inventoryDisplay;
     [SerializeField] private GameObject Slots;
+    
     public List<GameObject> listSlots;
     public List<bool> isFull;
     private int countSlots;
@@ -15,7 +16,6 @@ public class InventoryManagerment : MonoBehaviour
     private void Awake()
     {
 
- 
         // Find the gameobject named "Slots" so you can load its child objects into the listSlots
         Slots = GameObject.Find("Slots");
 
