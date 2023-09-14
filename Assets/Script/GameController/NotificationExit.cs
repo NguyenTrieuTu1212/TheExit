@@ -17,7 +17,12 @@ public class NotificationExit : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(windownExitDisplay.isActiveAndEnabled == false)
+
+
+            inventoryDisplay.Hide();
+            inventoryCanvas.SetActive(false);
+            windownExitDisplay.Show();
+            /*if(windownExitDisplay.isActiveAndEnabled == false)
             {
                 inventoryDisplay.Hide();
                 inventoryCanvas.SetActive(false);
@@ -27,7 +32,7 @@ public class NotificationExit : MonoBehaviour
             {
                 inventoryCanvas.SetActive(true);
                 windownExitDisplay.Hide();
-            }
+            }*/
         }
     }
 }
