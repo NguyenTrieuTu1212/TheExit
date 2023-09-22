@@ -8,7 +8,10 @@ public class SaveScenes : MonoBehaviour
     private int currentIndexScenes;
     public void SaveScene()
     {
+
+        PlayerPrefs.Save();
         currentIndexScenes = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("SaveScenes", currentIndexScenes);
+        
     }
 }

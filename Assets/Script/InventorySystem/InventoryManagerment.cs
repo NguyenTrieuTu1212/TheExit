@@ -15,7 +15,6 @@ public class InventoryManagerment : MonoBehaviour
     
     private void Awake()
     {
-
         // Find the gameobject named "Slots" so you can load its child objects into the listSlots
         Slots = GameObject.Find("Slots");
 
