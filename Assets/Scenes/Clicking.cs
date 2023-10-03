@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Clicking : MonoBehaviour,IDataPersistence
+public class Clicking : MonoBehaviour,IDataPersistance
 {
     public int countClick=0;
+    public int clickCountSave=0;
     public Text txtTextCount;
 
-
-    public void LoadData(GameData data)
+    
+    public void LoadGame(GameData data)
     {
-        this.countClick = data.clickCount;
+        countClick = data.countClicked;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveGame(ref GameData data)
     {
-        data.clickCount = this.countClick;
+        data.countClicked = countClick;
     }
 
-    private void Update()
+    public void OnClick()
     {
-        if(countClick < 100)
-        {
-            countClick++;
-            displayCountClick();
-        }
+        countClick++;
+        displayCountClick();
     }
 
     public void displayCountClick()

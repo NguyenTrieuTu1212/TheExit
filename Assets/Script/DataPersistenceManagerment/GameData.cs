@@ -6,10 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class GameData 
 {
-
-    public int clickCount;
+    public int countClicked;
     public GameData()
     {
-        this.clickCount = 0;
+       this.countClicked = 0;
     }
 }
