@@ -18,25 +18,24 @@ public class FileDataHandler{
     {
         string fullPath = Path.Combine(dataDirPath, dataFileName);
         GameData loadData = null;
-        
-        try
+        if (File.Exists(fullPath))
         {
-            string JsonData = "";
-            if (File.Exists(fullPath))
+            string dataJson = "";
+            try
             {
-                
                 using(FileStream fs = new FileStream(fullPath, FileMode.Open))
                 {
                     using(StreamReader sr = new StreamReader(fs))
                     {
-                        JsonData = sr.ReadToEnd();
+                        dataJson = sr.ReadToEnd();
                     }
                 }
+                loadData = JsonUtility.FromJson<GameData>(dataJson);
             }
-            loadData = JsonUtility.FromJson<GameData>(JsonData);
-        }
-        catch(Exception e)
-        {
+            catch (Exception e)
+            {
+                Debug.LogError(e.Message);
+            }
             
         }
         return loadData;
@@ -49,10 +48,10 @@ public class FileDataHandler{
         try
         {
             // Create direction
-            Directory.CreateDirectory(Path.GetFileName(fullPath));
+            Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
 
             // Convert Data to Json 
-            string dataStore = JsonUtility.ToJson(data);
+            string dataStore = JsonUtility.ToJson(data,true);
 
             using(FileStream fs = new FileStream(fullPath, FileMode.OpenOrCreate))
             {
@@ -65,9 +64,8 @@ public class FileDataHandler{
         }
         catch(Exception e)
         {
-           
+            Debug.LogError(e);
         }
-
 
 
     }

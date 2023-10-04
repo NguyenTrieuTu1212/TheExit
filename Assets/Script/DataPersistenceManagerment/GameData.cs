@@ -6,9 +6,10 @@ using UnityEngine;
 [System.Serializable]
 public class GameData 
 {
-    public int countClicked;
+   
+    public Vector3 vector3Obj;
     public GameData()
     {
-       this.countClicked = 0;
+       this.vector3Obj = new Vector3(0,0,0);
     }
 }

@@ -38,6 +38,7 @@ public class DataPersistanceManagement : MonoBehaviour
 
     private void LoadGame()
     {
+        gameData = fileDataHandler.ReadFile();
         if (gameData == null)
         {
             Debug.Log("Game data not found");
@@ -47,8 +48,8 @@ public class DataPersistanceManagement : MonoBehaviour
         {
             persistance.LoadGame(gameData);
         }
-        gameData = fileDataHandler.ReadFile();
-        Debug.Log("Data load is: " + gameData.countClicked);
+        
+        Debug.Log("Data load is: " + gameData.vector3Obj);
     }
 
     private void SaveGame()
@@ -59,7 +60,7 @@ public class DataPersistanceManagement : MonoBehaviour
             persistance.SaveGame(ref gameData);
         }
         fileDataHandler.WriteFile(gameData);
-        Debug.Log("Data save is: " + gameData.countClicked);
+        Debug.Log("Data save is: " + gameData.vector3Obj);
     }
 
     private void OnApplicationQuit()
