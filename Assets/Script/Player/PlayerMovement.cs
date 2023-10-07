@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MainPlayer
+public class PlayerMovement : MainPlayer,IDataPersistance
 {
     
     public float Move_Speed = 8.0f;
@@ -13,6 +13,16 @@ public class PlayerMovement : MainPlayer
     public Rigidbody2D rbDynamicPlatform;
     public bool isOnDynamicPlatform;
 
+
+    public void LoadGame(GameData data)
+    {
+        transform.parent.position = data.postionSpawnPlayer;
+    }
+
+    public void SaveGame(ref GameData data)
+    {
+        data.postionSpawnPlayer = transform.parent.position;
+    }
 
     private void FixedUpdate()
     {
@@ -42,4 +52,6 @@ public class PlayerMovement : MainPlayer
         gameObject.transform.parent.localScale = CurrentScale;
         IsFacingRight = !IsFacingRight;
     }
+
+   
 }
