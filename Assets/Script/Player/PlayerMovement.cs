@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MainPlayer,IDataPersistance
+public class PlayerMovement : MainPlayer/*,IDataPersistance*/
 {
     
     public float Move_Speed = 8.0f;
@@ -14,7 +14,7 @@ public class PlayerMovement : MainPlayer,IDataPersistance
     public bool isOnDynamicPlatform;
 
 
-    public void LoadGame(GameData data)
+    /*public void LoadGame(GameData data)
     {
         transform.parent.position = data.postionSpawnPlayer;
     }
@@ -22,7 +22,7 @@ public class PlayerMovement : MainPlayer,IDataPersistance
     public void SaveGame(ref GameData data)
     {
         data.postionSpawnPlayer = transform.parent.position;
-    }
+    }*/
 
     private void FixedUpdate()
     {
