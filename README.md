@@ -5,7 +5,7 @@
 - [Link Download Game]()
 - [Play game]()
 ## Giới Thiệu Game
-- [The Exit]() là một tựa game (dành cho PC) thuộc thể loại phiêu lưu khám phá, pha một chút yếu tố kinh dị. 
+- [The Exit](https://www.youtube.com/@_NTT12) là một tựa game (dành cho PC) thuộc thể loại phiêu lưu khám phá, pha một chút yếu tố kinh dị. 
 
 - Bạn sẽ vào vai một nhân vật tên là [Null]() bị lạc vào một nơi tối tăm ảm đạm và nơi ấy được gọi là [NoWhere](). Nhiệm vụ của bạn là thoát khỏi nơi tăm tối này. Trên đường thoát khỏi đây bạn sẽ  gặp vô số các cạm bẫy và quái vật cản đường bạn. 
 
