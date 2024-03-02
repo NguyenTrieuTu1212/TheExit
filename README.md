@@ -22,7 +22,7 @@
 
 - Tìm những manh mối, vật phẩm hữu ích giúp bạn có thể vượt qua màn tiếp theo.
 ## Một Số Hình Ảnh của Game
-<p><img src="https://github.com/NguyenTrieuTu1212/TheExit/assets/143092693/1bee9f06-8e3d-4e08-980a-3fc371612b45" alt="nguyentrieutu1212" /></p>
+<p><img src="https://github.com/NguyenTrieuTu1212/TheExit/assets/143092693/57b25f02-2847-4ae5-8c3f-81cdca3eb29f" alt="nguyentrieutu1212" /></p>
 <p><img src="https://github.com/NguyenTrieuTu1212/TheExit/assets/143092693/f6d57404-c373-454d-baea-d5e26647b08d" alt="nguyentrieutu1212" /></p>
 <p><img src="https://github.com/NguyenTrieuTu1212/TheExit/assets/143092693/a058b3b9-cdb0-48c0-891c-b5f27509823a" alt="nguyentrieutu1212" /></p>
 <p><img src="https://github.com/NguyenTrieuTu1212/TheExit/assets/143092693/3907b8fc-643f-4325-a228-5773badaef6f" alt="nguyentrieutu1212" /></p>
