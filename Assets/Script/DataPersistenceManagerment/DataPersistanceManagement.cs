@@ -8,7 +8,6 @@ using System.Linq;
 public class DataPersistanceManagement : MonoBehaviour
 {
     public GameData gameData;
-    [SerializeField] string fileNameSaveData;
     public FileDataHandler fileDataHandler;
     public static DataPersistanceManagement intance { get; private set; }
     List<IDataPersistance> listDataPersistances = new List<IDataPersistance>();
@@ -53,7 +52,7 @@ public class DataPersistanceManagement : MonoBehaviour
         }
         intance = this;
         DontDestroyOnLoad(gameObject);
-        fileDataHandler = new FileDataHandler("F:\\", fileNameSaveData);
+        fileDataHandler = new FileDataHandler(Application.persistentDataPath, "GameDataTheExit.txt");
     }
 
     

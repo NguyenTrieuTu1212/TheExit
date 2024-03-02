@@ -12,6 +12,17 @@ public class FileDataHandler{
     {
         this.dataDirPath = DataDirPath;
         this.dataFileName = DataFileName;
+        CreateFileIfNotExists();
+    }
+
+    private void CreateFileIfNotExists()
+    {
+        string fullPath = Path.Combine(dataDirPath, dataFileName);
+        if (!File.Exists(fullPath))
+        {
+            File.Create(fullPath).Close();
+            Debug.Log("File created at: " + fullPath);
+        }
     }
 
     public GameData ReadFile()
