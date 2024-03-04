@@ -2,7 +2,7 @@
 
 ## Tải Game
 - [Video Demo](https://www.youtube.com/@_NTT12)
-- [Link Download Game]()
+- [Link Download Game](https://github.com/NguyenTrieuTu1212/TheExit/blob/main/Game_Demo/My%20project.exe)
 - [Play game]()
 ## Giới Thiệu Game
 - [The Exit](https://www.youtube.com/@_NTT12) là một tựa game (dành cho PC) thuộc thể loại phiêu lưu khám phá, pha một chút yếu tố kinh dị. 
