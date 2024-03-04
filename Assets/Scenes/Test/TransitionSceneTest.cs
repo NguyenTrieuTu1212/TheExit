@@ -8,7 +8,7 @@ public class TransitionSceneTest : MonoBehaviour
     public string sceneName;
     public void OnClickNewGame()
     {
-        DataPersistanceManagement.intance.NewGame();
+       /* DataPersistanceManagement.intance.NewGame();*/
         SceneManager.LoadSceneAsync(sceneName);
         Debug.Log("New Game");
     }
