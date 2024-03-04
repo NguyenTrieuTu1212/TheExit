@@ -1,7 +1,7 @@
-# Tên Dự Án : [The Exit](https://www.youtube.com/@_NTT12)
+# Tên Dự Án : [The Exit](https://youtu.be/Cfcf5kreMMM)
 
 ## Tải Game
-- [Video Demo](https://www.youtube.com/@_NTT12)
+- [Video Demo](https://youtu.be/Cfcf5kreMMM)
 - [Link Download Game](https://github.com/NguyenTrieuTu1212/TheExit/blob/main/Game_Demo/My%20project.exe)
 - [Play game]()
 ## Giới Thiệu Game
