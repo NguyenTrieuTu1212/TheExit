@@ -13,7 +13,7 @@
 - Bạn có thể chạy nhưng liệu bạn có thể thoát ??? Hãy trải nghiệm tựa game này để có câu trả lời.
 
 ## Cách Chơi của Game
-- Nhiệm vụ của trò chơi rất đơn giản : [SỐNG SÓT]().
+- Nhiệm vụ của trò chơi rất đơn giản : [TRỐN THOÁT]().
 
 - Cố gắng tránh né những chướng ngại, cạm bẫy trên khắp đường đi.
 
